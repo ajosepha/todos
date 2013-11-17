@@ -24,6 +24,7 @@
 
 #A player gets dealt two cards which have values between 1-11. 
 
+
 cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 #a player gets dealt 2 cards
 player_move = []
@@ -35,6 +36,9 @@ player_move << cards.sample
 #got this from the ruby documentation. Not sure how it works, but it does :)
 player_move = player_move.reduce(:+)
 puts player_move
+
+
+#hit or stay 
 if player_move == 21
 	puts "Game over, you win!"
 else
@@ -49,20 +53,46 @@ else
 		player_move1 << player_move
 		player_move1 << cards.sample
 		player_move1 = player_move1.reduce(:+)
-		puts "You're new score is #{player_move1}"
+		if player_move1 > 21
+			puts "You got #{player_move1}. Boo you lose!"
+		elsif player_move1 < 21	
+			puts "You're new score is #{player_move1}."
+		else
+			puts "you got 21! WIN WIN WIN!"	
+		end	
+	else
+		puts "please type in y or n"		
+	end
+end	
+
+if player_move1 > 21
+	puts "Game over, you lost!"
+else
+	puts "Your second total is #{player_move1}. Type y to hit or n to end."
+	answer = gets.chomp.downcase
+	if answer == "y"
+		#this will need to be a method defined above this question.  Lets try it..
+		puts "let's play  more..."
+		player_move2 = []
+		player_move2 << player_move1
+		player_move2 << cards.sample
+		player_move2 = player_move2.reduce(:+)
+		if player_move2 > 21
+			puts "Booo hoo you lose"
+		elsif player_move2 < 21	
+			puts "You're new score is #{player_move2}. Close but no cigar."
+		else
+			puts "you got 21! WIN WIN WIN!"	
+		end	
+	elsif anser == "n"
+		puts "playing it safe is not always a winning strategy."	
 	else
 		puts "please type in y or n"		
 	end
 end	
 
 #for refactoring
-def check_win(move)
-		if move == 21
-			puts "congrats, you are the winner!"
-		else
-			puts "Do you want to pick another card?"
-		end
-end
+
 
 
 
