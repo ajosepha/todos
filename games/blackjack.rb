@@ -38,10 +38,10 @@ player_move = player_move.reduce(:+)
 puts player_move
 
 
-#hit or stay 
-if player_move == 21
+def hit_or_stay(player)
+	if player_move == 21
 	puts "Game over, you win!"
-else
+	else
 	puts "Your first total is #{player_move}. Type y to hit or n to end."
 	answer = gets.chomp.downcase
 	if answer == "n"
@@ -64,6 +64,7 @@ else
 		puts "please type in y or n"		
 	end
 end	
+end
 
 if player_move1 > 21
 	puts "Game over, you lost!"
