@@ -29,19 +29,19 @@ encode("intblakernblaketsashleythblakeashleyall")
 #the secret password is "intblakernblaketsashleythblakeashleyall"
 
 def decoder
-joined_password = "intblakernblaketsashleythblakeashleyall"
-joined_password.gsub!("ashley", " ")
-joined_password.gsub!("blake", "e")
-new_password_array = joined_password.split
-#["internets", "the", "all"] 
-#new_password_array.compact!
-#the compact doesn't do anything, it returned nil, so i'm taking this step out
-password_array = []
-password_array[0] = new_password_array[3]
-password_array[1] = new_password_array[1]
-password_array[2] = new_password_array[0]
-pass_as_string = password_array.join
-password = pass_as_string.to_sym
+  joined_password = "intblakernblaketsashleythblakeashleyall"
+  joined_password.gsub!("ashley", " ")
+  joined_password.gsub!("blake", "e")
+  new_password_array = joined_password.split
+  #["internets", "the", "all"] 
+  #new_password_array.compact!
+  #the compact doesn't do anything, it returned nil, so i'm taking this step out
+  password_array = []
+  password_array[0] = new_password_array[2]
+  password_array[1] = new_password_array[1]
+  password_array[2] = new_password_array[0]
+  pass_as_string = password_array.join("_")
+  password = pass_as_string.to_sym
 end
 
 #password = :theinternets

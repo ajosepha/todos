@@ -4,9 +4,7 @@
 #when the number is divisible by 3, say fizz
 #when the number is divisible by 5 say buzz
 #when the number is divisible by 3 and 5 say fizzbuzz
-100.times do |i|
-    i += 1
-	#puts i   
+def fizz_buzz(i) 
 	if i % 15 == 0
     puts "fizzbuzz"
     elsif i % 5 == 0
@@ -16,3 +14,4 @@
     else puts i
     end
 end
+fizz_buzz(20)
