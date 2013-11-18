@@ -4,14 +4,16 @@
 #when the number is divisible by 3, say fizz
 #when the number is divisible by 5 say buzz
 #when the number is divisible by 3 and 5 say fizzbuzz
-def fizz_buzz(i) 
-	if i % 15 == 0
-    puts "fizzbuzz"
-    elsif i % 5 == 0
-    puts "buzz"
-    elsif i % 3 == 0
-    puts "fizz"
-    else puts i
+def fizzbuzz(num) 
+	if num % 15 == 0
+	    "fizzbuzz"
+    elsif num % 5 == 0
+    	 "buzz"
+    elsif num % 3 == 0
+    	"fizz"
+    else
+    	num
     end
 end
-fizz_buzz(20)
+
+fizzbuzz(75)
