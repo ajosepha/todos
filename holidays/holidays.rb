@@ -107,13 +107,17 @@ end
 # ```
 
 # 7. Write a method to collect all holidays with BBQ.
-bbq_holiday =[]
+
 def has_bbq(hash)
-  hash.each do |holiday, stuff|
-    if stuff.include? "BBQ"==true
-      bbq_holiday << holiday
-    end
-  end
+  holidays_bbq = []
+    hash.each do |holiday, stuff|
+      stuff.each do |supply|
+        if supply == "BBQ"
+          holidays_bbq << holiday
+        end
+      end
+    end  
+end
 bbq_holiday  
 end
 has_bbq(holiday_supplies)
