@@ -21,7 +21,14 @@ def apple_picker(array)
 end  
 apple_picker(["apple", "orange", "apple"])
 
-
+def apple_picker(array)
+  apples = []
+  array.collect do |fruit|
+    apples << fruit if fruit == "apple"
+  end
+  apples
+end
+apple_picker(["apple", "orange", "apple"])    
 # Holiday Suppliers
 
 # You have a bunch of decorations for various holidays organized by season.
@@ -82,7 +89,14 @@ def winter_supplies(hash)
 end
 winter_supplies(holiday_supplies[:winter])
 
-# 6. Write a loop to list out all the supplies you have for each holiday and the season.
+#6. Write a loop to list out all the supplies you have for each holiday and the season.
+
+#for each first level, iterate inside to get the values 
+
+holiday_supplies.each_pair do |season, holiday|
+  next season
+  next holiday
+end  
 
 
 # Output:
@@ -93,6 +107,17 @@ winter_supplies(holiday_supplies[:winter])
 # ```
 
 # 7. Write a method to collect all holidays with BBQ.
+bbq_holiday =[]
+def has_bbq(hash)
+  hash.each do |holiday, stuff|
+    if stuff.include? "BBQ"==true
+      bbq_holiday << holiday
+    end
+  end
+bbq_holiday  
+end
+has_bbq(holiday_supplies)
+
 
 
 

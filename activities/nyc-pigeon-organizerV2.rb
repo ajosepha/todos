@@ -20,13 +20,34 @@ pigeon_data = {
 }
 
 #Start with an pigeon list hash which then has pigeons organized by name. 
-new_pigeon= {}
+new_pigeon = {}
 pigeon_data.each_pair do |key, value|
 #can say each_pair, it is an alias for each
+#key is color, gender, lives
   value.each_pair do |attribute, name_array|
+    #eg attribute: purple
+    #name _array = ["Theo", "Peter Jr.", "Lucky"],
     name_array.each do |name|
-      new_pigeon[name] = {} unless new_pigeon[name]
-      new_pigeon[name][:color] = [] unless new_pigeon 
+      #name = "Theo"
+      #new_pigeon[name] = {} unless new_pigeon[name]
+        #could also say 
+        if new_pigeon[name].nil?
+          new pigeon[name] = {}
+        end
+        if new_pigeon[name][:color].nil?
+          new_pigeon[name][:color] = []
+        end 
+        #set pigeon name to a new hash unless there already is a pigeon name there
+      #new_pigeon[name][:color] = [] unless new_pigeon[name][:color]
+        #this is the same as the code above
+        if key == :color
+          new_pigeon[name][key] << attribute
+         else
+          new_pigeon[name][key] = attribute 
+        end 
+    end
+  end
+end          
 
  
 # pigeon_data[:gender][:male].each do |individual|
