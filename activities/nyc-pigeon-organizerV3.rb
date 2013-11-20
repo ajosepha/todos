@@ -30,11 +30,13 @@ pigeon_data.each_pair do |top_line, hash|
       new_pigeon[name] = { }
       if new_pigeon[name][:color].nil?
         new_pigeon[name][:color] = []
+        new_pigeon[name][:color] << attribute
         
       end 
 
       if new_pigeon[name][:gender].nil?
         new_pigeon[name][:gender] = []
+       
         
       end
 
