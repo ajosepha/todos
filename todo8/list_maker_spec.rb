@@ -11,7 +11,11 @@ describe "#make_list" do
     
      it "should return a number before the array" do
           expect(make_list(["bob", "sal"])).to eq(["1. bob", "2. sal"])
-      end        
+      end   
+
+     it "should take out nil values" do
+        expect(make_list(["bob", nil, "becky"])).to eq(["1. bob", "2. becky"])
+     end      
 end
 
 

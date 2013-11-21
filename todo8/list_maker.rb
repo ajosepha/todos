@@ -2,6 +2,7 @@
 # as an array of strings in a numbered list.
  
 def make_list(array)
+    array.compact!
     new_array = []
     number = 0
     array.each do |item|
@@ -18,7 +19,7 @@ end
 #     counter_array
 # end   
 
-make_list([2, 3, 4]) 
+#make_list([2, 3, 4]) 
 
 # Run this test by typing `rspec list_maker_spec.rb` in your terminal.
  
