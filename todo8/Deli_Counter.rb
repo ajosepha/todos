@@ -37,4 +37,6 @@ class Deli
         puts @line 
     end  
     now_serving
-end    
+end 
+
+#Deli.new   
