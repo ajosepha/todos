@@ -14,7 +14,8 @@
 # 10000 = Reverse the order of the operations in the secret handshake.
 # ```
  
-# Write a program that will convert a binary number, represented as a string (i.e. "101010"), and convert it to the appropriate sequence of events for a secret handshake.
+# Write a program that will convert a binary number, represented as a string (i.e. "101010"), 
+#and convert it to the appropriate sequence of events for a secret handshake.
  
  
 # ```
@@ -27,18 +28,18 @@
  
 # The program should consider strings specifying an invalid binary as the value 0.
 
-require 'secret_handshake'
+require './secret_handshake.rb'
  
-RSpec.configure do |config|
-  # Use color in STDOUT
-  config.color_enabled = true
+# RSpec.configure do |config|
+#   # Use color in STDOUT
+#   config.color_enabled = true
  
-  # Use color not only in STDOUT but also in pagers and files
-  config.tty = true
+#   # Use color not only in STDOUT but also in pagers and files
+#   config.tty = true
  
-  # Use the specified formatter
-  config.formatter = :progress # :progress, :html, :textmate
-end
+#   # Use the specified formatter
+#   config.formatter = :progress # :progress, :html, :textmate
+# end
  
 describe 'SecretHandshake' do 
   it 'should know how to wink with a 1' do
@@ -81,3 +82,5 @@ describe 'SecretHandshake' do
     handshake.commands.should eq([])
   end
 end
+
+#SecretHandshake.new
