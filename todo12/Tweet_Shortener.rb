@@ -33,21 +33,39 @@
 # Modify your program to truncate the tweet to 140 characters if it's still too long after substitution
 
 require 'ap'
-def shorten_tweet(tweet)
-    if tweet.incude"to", 
-         tweet.gsub(/\bt[oo]/, "2")
+# def shorten_tweet(tweet)
+#     tweet.gsub(/\bt[oo]/, "2")
+#     tweet.gsub(/\btwo/, "2")
+
+#     # tweet.gsub(/\bfor/, "4")
+#     # tweet.gsub(/\bfour/, "4")
+#     # tweet.gsub(/\byou/, "u")
+#     # tweet.gsub(/\bat/, "@")
+#     # tweet.gsub(/\band/, "&")
+# end
+
+# ap shorten_tweet("Hey guys, can anyone teach me how to be cool? I really want to be the best at everything, you know what I mean? Tweeting is super fun you guys!!!!")
+
+def sub_word(string)
+    array = string.split
+    array.each do |word|
+        word.gsub!(/\bt[oo]\b/, "2")
+        #word.gsub!("too", "2")
+        word.gsub!("for", "4")
+        word.gsub!("four", "4")
+        word.gsub!("you", "u")
+        word.gsub!("at", "/@")
+        word.gsub!("and", "&")
     end
-    tweet.gsub(/\btwo/, "2")
-    tweet.gsub(/\bfor/, "4")
-    # tweet.gsub(/\bfour/, "4")
-    # tweet.gsub(/\byou/, "u")
-    # tweet.gsub(/\bat/, "@")
-    # tweet.gsub(/\band/, "&")
 end
 
+ap sub_word("i go to the store too for you")
 
 
-ap shorten_tweet("Hey guys, can anyone teach me how to be cool? I really want to be the best at everything, you know what I mean? Tweeting is super fun you guys!!!!")
+
+
+
+
 
 
 
