@@ -1,6 +1,11 @@
 def array_init(size)
-    Array.new(size)    
+    if block_given?
+        Array.new(size)  
+        yield block  
         size.times do |x|
-            x
-        end
+             yield block
+         end
+    else
+        Array.new(size)
+    end
 end
