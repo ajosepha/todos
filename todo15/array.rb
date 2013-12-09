@@ -1,7 +1,6 @@
 def array_init(size)
     if block_given?
-        Array.new(size)  
-        yield block  
+        Array.new(size)    
         size.times do |x|
              yield block
          end
