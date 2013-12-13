@@ -1,5 +1,12 @@
+require_relative 'song_library.rb'
+
 class Jukebox
-    
+  attr_accessor #:command
+
+  def initialize
+    #@command = command
+  end
+
   def jukebox(command)
     if command.downcase == "list"
       list_library
@@ -9,7 +16,7 @@ class Jukebox
   end
 
   def list_library
-    lib = full_library
+    lib = Songs.new
     lib.each do |artist, album_hash|
       puts list_artist(artist, album_hash)
     end
@@ -68,5 +75,6 @@ class Jukebox
   def not_found(command)
     puts "I did not understand '#{command}'!\n\n"
     true
+    end
   end
-  end
+end
