@@ -48,12 +48,13 @@ end
 def pay_by_cash(order)
   pay_by do |order|
     order.payment :type => :cash
-    #order.ship_goods
   end
 end
 
 def pay_by_store_credit(order)
-  order.payment :type => :store_credit
-  current_user.store_credit -= order.cost   # current_user is a method with no params (ie, the customer)
-  order.ship_goods
+  current_user.store_credit -= order.cost 
+  pay_by do |order|
+    order.payment :type => :store_credit
+    
+  end  # current_user is a method with no params (ie, the customer)
 end
