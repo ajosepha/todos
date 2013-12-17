@@ -1,4 +1,6 @@
 # instructions: implement Array.uniq
+require 'ap'
+require 'debugger'
  
 class Array
  
@@ -11,12 +13,15 @@ class Array
     @array.each do |element|
       if element == element
         @array.delete(element)
+        debugger
+        array2 << element
+      elsif element != element
         array2 << element
       else 
         array2 << element
       end
     end
-    puts array2
+    ap array2
   end
 
 
