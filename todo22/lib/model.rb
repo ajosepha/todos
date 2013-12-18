@@ -8,51 +8,49 @@ class Birthday
         @today = Date.today
     end
 
-    # def bday
-    #     if @today.day == 01 && @today.month == 10
-    #         "it's ariel's birthday"
-    #     elsif @today.day == 18 && @today.month == 12
-            
-    #     else
-    #         "No"
-    #     end
-    # end
-
-    def tu_bshvat
-        if @today.day == 18 && @today.month == 12
-            "it's Tu B'Shevat, the begining of the 'new year' for trees!"
+    def run
+        if tu_bshvat
+        elsif purim
+        else
+            "Lo, it's not a Jewish holiday today!"
         end
     end
 
-    # def purim
-    #     if @today.day == 15 && @today.month == 03
-    #         "Purim starts tonight! Better start drinking!"
-    #     elsif @today.day == 16 && @today.month == 03
-    #         "It's Purim today! What are you dressed up as?"
-    #     end
-    # end
+    def tu_bshvat
+        if @today.day == 15 && @today.month == 1
+            "It's Tu B'Shvat, the begining of the 'new year' for trees!"
+        end
+    end
 
-    # def passover
-    #     if @today.day == 14 && @today.month == 04
-    #          "It's the first night of Passover, watch out for that Manishevitz"
-    #     elsif @today.day == 15 && @today.month == 04
-    #          "It's passover, enjoy your gluten-free life!"
-    #     elsif @today.day == 16 && @today.month == 04
-    #          "It's passover, enjoy your gluten-free life!"
-    #     elsif @today.day == 17 && @today.month == 04
-    #          "It's passover, enjoy your gluten-free life!"
-    #     elsif @today.day == 18 && @today.month == 04
-    #          "It's passover, enjoy your gluten-free life!"
-    #     elsif @today.day == 19 && @today.month == 04
-    #          "It's passover, enjoy your gluten-free life!"
-    #     elsif @today.day == 20 && @today.month == 04
-    #          "It's passover, enjoy your gluten-free life!"
-    #     elsif @today.day == 21 && @today.month == 04
-    #          "It's passover, enjoy your gluten-free life!"
-    #     elsif @today.day == 22 && @today.month == 04
-    #         "Congrats! you made it to the last night of Passover! Go have a pizza, you deserve it."
-    #     end
-    # end
+    def purim
+        if @today.day == 15 && @today.month == 3
+            "Purim starts tonight! Better start drinking!"
+        elsif @today.day == 16 && @today.month == 3
+            "It's Purim today! What are you dressed up as?"
+        end
+    end
+
+    def passover
+        if @today.day == 14 && @today.month == 04
+             "It's the first night of Passover, watch out for that Manishevitz"
+        elsif @today.day == 15 && @today.month == 04
+             "It's passover, enjoy your gluten-free life!"
+        elsif @today.day == 16 && @today.month == 04
+             "It's passover, enjoy your gluten-free life!"
+        elsif @today.day == 17 && @today.month == 04
+             "It's passover, enjoy your gluten-free life!"
+        elsif @today.day == 18 && @today.month == 04
+             "It's passover, enjoy your gluten-free life!"
+        elsif @today.day == 19 && @today.month == 04
+             "It's passover, enjoy your gluten-free life!"
+        elsif @today.day == 20 && @today.month == 04
+             "It's passover, enjoy your gluten-free life!"
+        elsif @today.day == 21 && @today.month == 04
+             "It's passover, enjoy your gluten-free life!"
+        elsif @today.day == 22 && @today.month == 04
+            "Congrats! you made it to the last night of Passover! Go have a pizza, you deserve it."
+        end
+    end
 
     # def shavout
     #    if @today.day == 03 && @today.month == 06
@@ -120,11 +118,6 @@ class Birthday
     #     "Last night of Hannukah!"
     #   end
     # end
-
-
-
-
-
 
 
 
