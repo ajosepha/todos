@@ -1,13 +1,25 @@
 .header {
 	font-family: 'New Rocker', cursive;
-	font-size: 300%;
+	font-size: 100px;
 	background-color: #120A2A;
 	color: white;
 	height: 200px;
-	text-align: center
-	vertical-align: center;
+	text-align: center;
+	line-height: 200px
+}
 
+body {
+	background-color: tan;
+}
+
+.today {
+	font-family: 'New Rocker';
+	font-size: 50px;
+	text-align: center;
+	float: center;
+	line-height: 300px;
 
 }
+
 
 
