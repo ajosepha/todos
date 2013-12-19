@@ -1,5 +1,13 @@
-body {
-	background: #282828;
+.header {
+	font-family: 'New Rocker', cursive;
+	font-size: 300%;
+	background-color: #120A2A;
 	color: white;
-	
+	height: 200px;
+	text-align: center
+	vertical-align: center;
+
+
 }
+
+
