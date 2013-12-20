@@ -20,8 +20,8 @@ class FakeHashWrapper
   end
 
   def to_symbol
-    hash_key = []
-    hash.value = []
+    @hash_key = []
+    @hash.value = []
     hash.each do |key, value|
       hash_key << key
       hash_value << value
@@ -31,15 +31,16 @@ class FakeHashWrapper
     end
   end
 
-  def find_values
-    
+  def set_value(new_key, new_value)
+    @hash_key << new_key
+    @hash_key.uniq
+    @hash_value << new_value
+  end
+
+  def to_hash
+    @hash_key.zip(hash_value) {|a,b|}@new_hash[a.to_sym]}
   end
 
 
-
-
-  end
- 
- 
  
 end
