@@ -1,3 +1,7 @@
+body {
+	background-color: tan;
+}
+
 .header {
 	font-family: 'New Rocker', cursive;
 	font-size: 100px;
@@ -8,17 +12,12 @@
 	line-height: 200px
 }
 
-body {
-	background-color: tan;
-}
-
 .today {
 	font-family: 'New Rocker';
 	font-size: 50px;
 	text-align: center;
 	float: center;
 	line-height: 300px;
-
 }
 
 
