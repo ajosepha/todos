@@ -1,0 +1,9 @@
+Issues: 
+No /br
+Font color is in the html
+margin is 8px and margin-top is 8px, meaning that other margins aren't showing up
+Problem--text is different sizes and keeps getting bigger
+There isn't any text size
+Nothing inhereted from H3 is showing up because it isn't designed as a stylesheet
+Keeps inheriting from H3s
+Nested H3s that keep inherriting
