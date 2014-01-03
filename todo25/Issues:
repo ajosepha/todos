@@ -7,3 +7,5 @@ There isn't any text size
 Nothing inhereted from H3 is showing up because it isn't designed as a stylesheet
 Keeps inheriting from H3s
 Nested H3s that keep inherriting
+H3 tags are nested, and act relatively to each other?
+H3 tags work relative to each other, so if they are nested, then they will change the size relative to the one above.
