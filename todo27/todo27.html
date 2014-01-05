@@ -4,10 +4,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap-responsive.css">
+    <script type="text/javascript" src="bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
 <body>
-  <h1>Testing 123</h1>
+  <nav class = "navbar navbar-inverse navbar-fixed-top" role = "navigation" >
+    <div class = "navbar-header">
+      <a class="navbar-brand" href ="#">Project Name</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" role="navigation">
+      <ul class ="nav navbar-nav">
+        <li class="active"><a href="#">Home</li></a>
+        <li><a href="#">About</li></a>
+        <li class="dropdown"><a href="#">Dropdown</li></a>
+      </ul>
+
+    <form class="navbar-form pull-right">
+      <!-- :before -->
+      <input class="span2" type="text" placeholder="Email">
+      <input class="span2" type="password" placeholder="Password">
+      <button type="submit" class="btn">Sign in</button>
+       <!-- :after -->
+    </form>
+    </div>
+  </nav>
 </body>
 
-
-</head>
 </html>
