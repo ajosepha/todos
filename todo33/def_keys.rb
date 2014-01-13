@@ -2,8 +2,14 @@ Get keys of a hash whose values equal to given arguments.
  
 Code:
 class Hash
+  attr_accessor :hash
+
+  def initialize
+    @hash = hash
+  end
   def keys_of(*args)
-    #code goes here
+    #splat method automatically assigns an array
+    #key == the 
   end
 end
  
