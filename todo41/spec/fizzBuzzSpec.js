@@ -1,4 +1,4 @@
-describe( "#fizBuzz", function (){
+describe( "#fizzBuzz", function (){
   it("returns fizzbuzz if i is divisible by 15", function(){
     expect(fizzbuzz(15)).toBe("fizzbuzz");
   });
